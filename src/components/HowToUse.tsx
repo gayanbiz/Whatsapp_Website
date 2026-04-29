@@ -92,6 +92,10 @@ export function HowToUse({ t }: HowToUseProps) {
     "Follow these five quick steps to print WhatsApp chats.",
   );
   const steps = getSteps(t);
+  const imageClassName =
+    "mx-auto w-full max-w-[560px] h-auto max-h-[280px] sm:max-h-[320px] lg:max-h-[380px] rounded-xl border-2 border-slate-200 object-contain bg-white";
+  const placeholderClassName =
+    "mx-auto flex w-full max-w-[560px] items-center justify-center rounded-xl border-2 border-dashed border-slate-300 bg-white px-4 py-10 text-sm font-medium tracking-wide text-slate-500";
 
   return (
     <section id="howToUse" className="scroll-mt-28 bg-white px-4 py-16 sm:px-6 lg:px-8">
@@ -136,34 +140,34 @@ export function HowToUse({ t }: HowToUseProps) {
                       <img
                         src="/howto-1.png"
                         alt="WhatsApp Print Manager screenshot"
-                        className="mx-auto h-60 w-full max-w-100 rounded-xl border-2 border-slate-200 object-cover"
+                        className={imageClassName}
                       />
                     ) : index === 1 ? (
                       <img
                         src="/howto-2.webp"
                         alt="WhatsApp Print Manager inbox screenshot"
-                        className="mx-auto h-60 w-full max-w-100 rounded-xl border-2 border-slate-200 object-cover"
+                        className={imageClassName}
                       />
                     ) : index === 2 ? (
                       <img
                         src="/howto-3.jpg"
                         alt="WhatsApp Print Manager batch download screenshot"
-                        className="mx-auto h-60 w-full max-w-100 rounded-xl border-2 border-slate-200 object-cover"
+                        className={imageClassName}
                       />
                     ) : index === 3 ? (
                       <img
                         src="/howto-4.png"
                         alt="WhatsApp Print Manager open with screenshot"
-                        className="mx-auto h-60 w-full max-w-100 rounded-xl border-2 border-slate-200 object-cover"
+                        className={imageClassName}
                       />
                     ) : index === 4 ? (
                       <img
                         src="/howto-5.jpg"
                         alt="WhatsApp Print Manager file explorer screenshot"
-                        className="mx-auto h-60 w-full max-w-100 rounded-xl border-2 border-slate-200 object-cover"
+                        className={imageClassName}
                       />
                     ) : (
-                      <div className="mx-auto flex h-60 w-full max-w-100 items-center justify-center rounded-xl border-2 border-dashed border-slate-300 bg-white text-sm font-medium tracking-wide text-slate-500">
+                      <div className={placeholderClassName}>
                         [ Screenshot ]
                       </div>
                     )}
