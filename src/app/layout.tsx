@@ -16,7 +16,7 @@ const englishFont = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "WA Print Manager — WhatsApp Printing for Sri Lanka",
+  title: "Whatsapp Print Manager",
   description:
     "The easiest way to print and manage your WhatsApp chats. Download free for Windows.",
 };
