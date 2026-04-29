@@ -138,6 +138,30 @@ export function HowToUse({ t }: HowToUseProps) {
                         alt="WhatsApp Print Manager screenshot"
                         className="mx-auto h-60 w-full max-w-100 rounded-xl border-2 border-slate-200 object-cover"
                       />
+                    ) : index === 1 ? (
+                      <img
+                        src="/howto-2.webp"
+                        alt="WhatsApp Print Manager inbox screenshot"
+                        className="mx-auto h-60 w-full max-w-100 rounded-xl border-2 border-slate-200 object-cover"
+                      />
+                    ) : index === 2 ? (
+                      <img
+                        src="/howto-3.jpg"
+                        alt="WhatsApp Print Manager batch download screenshot"
+                        className="mx-auto h-60 w-full max-w-100 rounded-xl border-2 border-slate-200 object-cover"
+                      />
+                    ) : index === 3 ? (
+                      <img
+                        src="/howto-4.png"
+                        alt="WhatsApp Print Manager open with screenshot"
+                        className="mx-auto h-60 w-full max-w-100 rounded-xl border-2 border-slate-200 object-cover"
+                      />
+                    ) : index === 4 ? (
+                      <img
+                        src="/howto-5.jpg"
+                        alt="WhatsApp Print Manager file explorer screenshot"
+                        className="mx-auto h-60 w-full max-w-100 rounded-xl border-2 border-slate-200 object-cover"
+                      />
                     ) : (
                       <div className="mx-auto flex h-60 w-full max-w-100 items-center justify-center rounded-xl border-2 border-dashed border-slate-300 bg-white text-sm font-medium tracking-wide text-slate-500">
                         [ Screenshot ]
