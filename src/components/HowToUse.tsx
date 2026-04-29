@@ -11,29 +11,29 @@ type HowToUseProps = {
 
 const fallbackSteps: HowToUseStep[] = [
   {
-    title: "Install the application",
+    title: "Sign in with WhatsApp Linked Devices using a QR code.",
     description:
-      "Download WhatsApp Print Manager and complete the setup on your computer.",
+      "Open the app, scan the QR code with your phone's WhatsApp Linked Devices feature, and connect securely.",
   },
   {
-    title: "Open WhatsApp Web and log in",
+    title: "View unread chats and file attachments quickly.",
     description:
-      "Go to web.whatsapp.com, scan the QR code, and connect your account.",
+      "The app automatically syncs your WhatsApp chats, highlighting conversations with new messages and media files.",
   },
   {
-    title: "Select the chat you want to print",
+    title: "Batch download files and print in one flow.",
     description:
-      "Choose any personal or group conversation from your chat list.",
+      "As soon as you open a chat, the unread files in it are automatically downloaded and selected.",
   },
   {
-    title: "Choose print layout and settings",
+    title: "The ability to open files with any application you want",
     description:
-      "Set paper size, date range, and formatting before generating output.",
+      "If you want to open a file with an application instead of printing it, simply right-click the file and choose 'Open with'.",
   },
   {
-    title: "Click Print or Export as PDF",
+    title: "Ability to open only selected files from file explorer",
     description:
-      "Print directly to your printer or save the conversation as a PDF file.",
+      "If you want to open only a few files from a chat, you can find them in the file explorer and open them directly without going through the app.",
   },
 ];
 

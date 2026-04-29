@@ -20,12 +20,12 @@ export function Hero({ t, version, downloadUrl }: HeroProps) {
   const headline = textOrFallback(
     t,
     "hero.headline",
-    "Manage and print your WhatsApp chats with speed and clarity",
+    "Print Whatsapp customer files fast.",
   );
   const subheadline = textOrFallback(
     t,
     "hero.subheadline",
-    "Prepare printable chat records in seconds with professional layouts and reliable export options.",
+    "A Windows desktop app for bookshops and print shops to download and print files received via WhatsApp.",
   );
   const downloadLabel = textOrFallback(
     t,
