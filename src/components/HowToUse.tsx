@@ -92,7 +92,6 @@ export function HowToUse({ t }: HowToUseProps) {
     "Follow these five quick steps to print WhatsApp chats.",
   );
   const steps = getSteps(t);
-  const bottomNote = getText(t, "howToUse.screenshotsNote", "Screenshots coming soon");
 
   return (
     <section id="howToUse" className="scroll-mt-28 bg-white px-4 py-16 sm:px-6 lg:px-8">
@@ -143,7 +142,6 @@ export function HowToUse({ t }: HowToUseProps) {
           })}
         </div>
 
-        <p className="mt-10 text-center text-sm font-medium text-slate-500">{bottomNote}</p>
       </div>
     </section>
   );
