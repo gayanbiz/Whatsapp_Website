@@ -2,6 +2,7 @@
 
 type PricingProps = {
   t: Function;
+  downloadUrl: string;
 };
 
 function getText(t: Function, key: string, fallback: string): string {
@@ -65,7 +66,7 @@ function CheckIcon() {
   );
 }
 
-export function Pricing({ t }: PricingProps) {
+export function Pricing({ t, downloadUrl }: PricingProps) {
   const planName = getText(t, "pricing.plan.name", "Annual Plan");
   const isSinhala = /[\u0D80-\u0DFF]/.test(planName);
 
@@ -102,11 +103,13 @@ export function Pricing({ t }: PricingProps) {
         "අඛණ්ඩ යාවත්කාලීන සහ සහාය",
       ]
     : [
-        "Unlimited chat printing",
-        "Custom print layouts and page settings",
-        "Export as PDF",
-        "Fast and reliable performance",
-        "Ongoing updates and support",
+        "QR code login with WhatsApp Linked Devices",
+        "See unread chats and files at a glance",
+        "Batch download and print flow",
+        "Works with PDFs, images, Office files, and more",
+        "Persistent WhatsApp session",
+        "Built-in app updates",
+        "Windows 10/11 support",
       ];
 
   const features = getFeatures(t, featureFallback);
@@ -148,7 +151,7 @@ export function Pricing({ t }: PricingProps) {
             </ul>
 
             <a
-              href="https://wa.me/94XXXXXXXXX"
+              href={downloadUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 inline-flex w-full items-center justify-center rounded-xl bg-[#25D366] px-5 py-3.5 text-base font-semibold text-[#062313] transition hover:brightness-95"

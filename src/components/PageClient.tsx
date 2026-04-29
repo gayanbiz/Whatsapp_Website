@@ -21,7 +21,7 @@ export function PageClient({ version, downloadUrl }: PageClientProps) {
       <main className="flex-1">
         <Hero t={t} version={version} downloadUrl={downloadUrl} />
         <HowToUse t={t} />
-        <Pricing t={t} />
+        <Pricing t={t} downloadUrl={downloadUrl} />
       </main>
       <Footer t={t} />
     </div>
