@@ -11,29 +11,29 @@ type HowToUseProps = {
 
 const fallbackSteps: HowToUseStep[] = [
   {
-    title: "Install the application",
+    title: "Sign in with WhatsApp Linked Devices using a QR code.",
     description:
-      "Download WhatsApp Print Manager and complete the setup on your computer.",
+      "Open the app, scan the QR code with your phone's WhatsApp Linked Devices feature, and connect securely.",
   },
   {
-    title: "Open WhatsApp Web and log in",
+    title: "View unread chats and file attachments quickly.",
     description:
-      "Go to web.whatsapp.com, scan the QR code, and connect your account.",
+      "The app automatically syncs your WhatsApp chats, highlighting conversations with new messages and media files.",
   },
   {
-    title: "Select the chat you want to print",
+    title: "Batch download files and print in one flow.",
     description:
-      "Choose any personal or group conversation from your chat list.",
+      "As soon as you open a chat, the unread files in it are automatically downloaded and selected.",
   },
   {
-    title: "Choose print layout and settings",
+    title: "The ability to open files with any application you want",
     description:
-      "Set paper size, date range, and formatting before generating output.",
+      "If you want to open a file with an application instead of printing it, simply right-click the file and choose 'Open with'.",
   },
   {
-    title: "Click Print or Export as PDF",
+    title: "Ability to open only selected files from file explorer",
     description:
-      "Print directly to your printer or save the conversation as a PDF file.",
+      "If you want to open only a few files from a chat, you can find them in the file explorer and open them directly without going through the app.",
   },
 ];
 
@@ -92,7 +92,6 @@ export function HowToUse({ t }: HowToUseProps) {
     "Follow these five quick steps to print WhatsApp chats.",
   );
   const steps = getSteps(t);
-  const bottomNote = getText(t, "howToUse.screenshotsNote", "Screenshots coming soon");
 
   return (
     <section id="howToUse" className="scroll-mt-28 bg-white px-4 py-16 sm:px-6 lg:px-8">
@@ -133,9 +132,17 @@ export function HowToUse({ t }: HowToUseProps) {
                   </div>
 
                   <div className={isRightAligned ? "md:order-1" : "md:order-2"}>
-                    <div className="mx-auto flex h-60 w-full max-w-100 items-center justify-center rounded-xl border-2 border-dashed border-slate-300 bg-white text-sm font-medium tracking-wide text-slate-500">
-                      [ Screenshot ]
-                    </div>
+                    {index === 0 ? (
+                      <img
+                        src="/howto-1.png"
+                        alt="WhatsApp Print Manager screenshot"
+                        className="mx-auto h-60 w-full max-w-100 rounded-xl border-2 border-slate-200 object-cover"
+                      />
+                    ) : (
+                      <div className="mx-auto flex h-60 w-full max-w-100 items-center justify-center rounded-xl border-2 border-dashed border-slate-300 bg-white text-sm font-medium tracking-wide text-slate-500">
+                        [ Screenshot ]
+                      </div>
+                    )}
                   </div>
                 </div>
               </article>
@@ -143,7 +150,6 @@ export function HowToUse({ t }: HowToUseProps) {
           })}
         </div>
 
-        <p className="mt-10 text-center text-sm font-medium text-slate-500">{bottomNote}</p>
       </div>
     </section>
   );
