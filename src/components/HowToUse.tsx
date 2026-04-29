@@ -132,9 +132,17 @@ export function HowToUse({ t }: HowToUseProps) {
                   </div>
 
                   <div className={isRightAligned ? "md:order-1" : "md:order-2"}>
-                    <div className="mx-auto flex h-60 w-full max-w-100 items-center justify-center rounded-xl border-2 border-dashed border-slate-300 bg-white text-sm font-medium tracking-wide text-slate-500">
-                      [ Screenshot ]
-                    </div>
+                    {index === 0 ? (
+                      <img
+                        src="/howto-1.png"
+                        alt="WhatsApp Print Manager screenshot"
+                        className="mx-auto h-60 w-full max-w-100 rounded-xl border-2 border-slate-200 object-cover"
+                      />
+                    ) : (
+                      <div className="mx-auto flex h-60 w-full max-w-100 items-center justify-center rounded-xl border-2 border-dashed border-slate-300 bg-white text-sm font-medium tracking-wide text-slate-500">
+                        [ Screenshot ]
+                      </div>
+                    )}
                   </div>
                 </div>
               </article>
