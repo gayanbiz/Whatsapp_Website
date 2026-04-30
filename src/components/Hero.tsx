@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 type HeroProps = {
   t: Function;
   version: string;
@@ -57,6 +59,23 @@ export function Hero({ t, version, downloadUrl }: HeroProps) {
         <p className="mt-5 max-w-2xl text-center text-base leading-relaxed text-white/75 sm:text-lg">
           {subheadline}
         </p>
+
+        <div className="mt-7 flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-black/35 px-5 py-4 text-xs text-white/70 shadow-[0_12px_30px_rgba(0,0,0,0.35)] sm:flex-row sm:gap-4">
+          <span className="text-[0.65rem] uppercase tracking-[0.28em] text-white/50">
+            Powered by
+          </span>
+          <Image
+            src="/branding/biz-software-solutions.png"
+            alt="BIZ Software Solutions logo"
+            width={320}
+            height={320}
+            loading="eager"
+            className="h-16 w-auto sm:h-20"
+          />
+          <span className="text-sm font-semibold tracking-wide text-white/85">
+            BIZ Software Solutions
+          </span>
+        </div>
 
         <div className="mt-9 flex flex-col items-center gap-3">
           <a
