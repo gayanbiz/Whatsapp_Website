@@ -7,9 +7,9 @@ export type GitHubRelease = {
 };
 
 const FALLBACK_DOWNLOAD_URL =
-  "https://github.com/darkgrecher/WhatsApp-Print-Manager/releases/latest";
+  "https://github.com/gayanbiz/Whatsapp_Desktop_Apk/releases/latest";
 const LATEST_RELEASE_API_URL =
-  "https://api.github.com/repos/darkgrecher/WhatsApp-Print-Manager/releases/latest";
+  "https://api.github.com/repos/gayanbiz/Whatsapp_Desktop_Apk/releases/latest";
 
 export async function getLatestRelease(): Promise<{
   version: string;
