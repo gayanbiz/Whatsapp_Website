@@ -36,6 +36,20 @@ export function Footer({ t }: FooterProps) {
           >
             {contact}
           </a>
+          <a
+            href="tel:+94713554488"
+            className="text-white/70 transition-colors hover:text-[#25D366]"
+          >
+            +94 713 554 488
+          </a>
+          <a
+            href="https://wa.me/94713554488"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/70 transition-colors hover:text-[#25D366]"
+          >
+            WhatsApp
+          </a>
         </div>
       </div>
     </footer>
