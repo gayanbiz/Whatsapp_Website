@@ -3,7 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --page-background: radial-gradient(
+  --page-background:
+    radial-gradient(
       1200px 500px at 50% -10%,
       rgba(37, 211, 102, 0.28),
       transparent 70%
