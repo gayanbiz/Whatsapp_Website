@@ -5,7 +5,6 @@ import Image from "next/image";
 type HeroProps = {
   t: Function;
   version: string;
-  downloadUrl: string;
 };
 
 function textOrFallback(t: Function, key: string, fallback: string): string {
@@ -17,7 +16,7 @@ function textOrFallback(t: Function, key: string, fallback: string): string {
   }
 }
 
-export function Hero({ t, version, downloadUrl }: HeroProps) {
+export function Hero({ t, version }: HeroProps) {
   const badgeText = textOrFallback(t, "hero.badge", "WhatsApp Print Manager");
   const headline = textOrFallback(
     t,
@@ -29,12 +28,6 @@ export function Hero({ t, version, downloadUrl }: HeroProps) {
     "hero.subheadline",
     "A Windows desktop app for bookshops and print shops to download and print files received via WhatsApp.",
   );
-  const downloadLabel = textOrFallback(
-    t,
-    "hero.downloadBtn",
-    "Download for Windows",
-  );
-  const freeTrialNote = textOrFallback(t, "hero.freeTrialNote", "7-day free trial");
 
   return (
     <section className="relative isolate overflow-hidden bg-[radial-gradient(1200px_500px_at_50%_-10%,rgba(37,211,102,0.28),transparent_70%),linear-gradient(160deg,#07130F_0%,#0A1A16_40%,#101316_100%)] px-4 pb-20 pt-20 text-white sm:px-6 lg:px-8 lg:pt-28">
@@ -75,20 +68,6 @@ export function Hero({ t, version, downloadUrl }: HeroProps) {
           <span className="text-sm font-semibold tracking-wide text-white/85">
             BIZ Software Solutions
           </span>
-        </div>
-
-        <div className="mt-9 flex flex-col items-center gap-3">
-          <a
-            href={downloadUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center justify-center rounded-2xl bg-[#25D366] px-7 py-4 text-base font-semibold text-[#062313] shadow-[0_14px_35px_rgba(37,211,102,0.3)] transition duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(37,211,102,0.42)] active:translate-y-0"
-          >
-            <span>⬇ {downloadLabel} - v{version}</span>
-          </a>
-          <p className="text-sm text-white/65">
-            {freeTrialNote} · Windows 10/11
-          </p>
         </div>
 
         <div className="mt-12 w-full max-w-5xl rounded-3xl border border-white/10 bg-[#0E1116]/85 p-3 shadow-2xl shadow-black/45 backdrop-blur-md sm:p-5">

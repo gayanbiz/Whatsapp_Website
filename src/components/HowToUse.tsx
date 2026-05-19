@@ -96,6 +96,38 @@ export function HowToUse({ t }: HowToUseProps) {
     "mx-auto w-full max-w-[560px] h-auto max-h-[280px] sm:max-h-[320px] lg:max-h-[380px] rounded-xl border-2 border-slate-200 object-contain bg-white";
   const placeholderClassName =
     "mx-auto flex w-full max-w-[560px] items-center justify-center rounded-xl border-2 border-dashed border-slate-300 bg-white px-4 py-10 text-sm font-medium tracking-wide text-slate-500";
+  const smartScreenTitle = getText(
+    t,
+    "howToUse.smartScreenTitle",
+    "If Windows shows a SmartScreen warning",
+  );
+  const smartScreenIntro = getText(
+    t,
+    "howToUse.smartScreenIntro",
+    "Follow these quick steps to continue installing safely.",
+  );
+  const smartScreenSteps = [
+    {
+      title: getText(t, "howToUse.smartScreenStep1Title", "Click More info"),
+      description: getText(
+        t,
+        "howToUse.smartScreenStep1Description",
+        "This reveals the option to continue with the installer.",
+      ),
+      imageSrc: "/smart-screen-1.png",
+      alt: "Windows SmartScreen warning with More info highlighted",
+    },
+    {
+      title: getText(t, "howToUse.smartScreenStep2Title", "Click Run anyway"),
+      description: getText(
+        t,
+        "howToUse.smartScreenStep2Description",
+        "Choose Run anyway to start WhatsApp Print Manager.",
+      ),
+      imageSrc: "/smart-screen-2.png",
+      alt: "Windows SmartScreen details with Run anyway highlighted",
+    },
+  ];
 
   return (
     <section id="howToUse" className="scroll-mt-28 bg-white px-4 py-16 sm:px-6 lg:px-8">
@@ -105,6 +137,43 @@ export function HowToUse({ t }: HowToUseProps) {
             {title}
           </h2>
           <p className="mt-3 text-base text-slate-600 sm:text-lg">{subtitle}</p>
+        </div>
+
+        <div className="mt-14 rounded-2xl border border-emerald-100 bg-emerald-50/40 px-5 py-8 shadow-sm sm:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <h3 className="text-2xl font-semibold text-slate-900">
+              {smartScreenTitle}
+            </h3>
+            <p className="mt-2 text-sm text-slate-600 sm:text-base">
+              {smartScreenIntro}
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            {smartScreenSteps.map((step, index) => (
+              <article
+                key={step.title}
+                className="flex h-full flex-col gap-4 rounded-2xl border border-emerald-100 bg-white/90 p-5 shadow-sm"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-emerald-200 bg-emerald-50 text-sm font-semibold text-emerald-700">
+                    {index + 1}
+                  </span>
+                  <h4 className="text-lg font-semibold text-slate-900">
+                    {step.title}
+                  </h4>
+                </div>
+                <p className="text-sm leading-relaxed text-slate-600 sm:text-base">
+                  {step.description}
+                </p>
+                <img
+                  src={step.imageSrc}
+                  alt={step.alt}
+                  className={imageClassName}
+                />
+              </article>
+            ))}
+          </div>
         </div>
 
         <div className="relative mt-12 space-y-12 md:space-y-14">
