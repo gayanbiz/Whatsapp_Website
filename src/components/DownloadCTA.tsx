@@ -34,7 +34,7 @@ export function DownloadCTA({ t, version, downloadUrl }: DownloadCTAProps) {
   );
 
   return (
-    <section className="bg-white px-4 py-20 sm:px-6 lg:px-8">
+    <section className="px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-4xl rounded-3xl bg-emerald-950 px-6 py-16 text-center text-white shadow-xl sm:px-12 sm:py-20 lg:p-20">
         <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
           {ctaHeading}

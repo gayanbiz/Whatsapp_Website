@@ -115,33 +115,33 @@ export function Pricing({ t, downloadUrl }: PricingProps) {
   const features = getFeatures(t, featureFallback);
 
   return (
-    <section id="pricing" className="scroll-mt-28 bg-slate-100 px-4 py-16 sm:px-6 lg:px-8">
+    <section id="pricing" className="scroll-mt-28 px-4 py-16 text-white sm:px-6 lg:px-8">
       <div className="mx-auto w-full max-w-6xl">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             {title}
           </h2>
-          <p className="mt-3 text-base text-slate-600 sm:text-lg">{subtitle}</p>
+          <p className="mt-3 text-base text-white/70 sm:text-lg">{subtitle}</p>
         </div>
 
         <div className="mt-10 flex justify-center">
-          <article className="w-full max-w-xl rounded-3xl border border-slate-200 bg-white p-7 shadow-[0_16px_40px_rgba(15,23,42,0.08)] sm:p-8">
+          <article className="w-full max-w-xl rounded-3xl border border-white/10 bg-[#0e1116]/85 p-7 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-8">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <h3 className="text-2xl font-semibold text-slate-900">{planName}</h3>
-                <p className="mt-4 flex items-end gap-2 text-slate-900">
+                <h3 className="text-2xl font-semibold text-white">{planName}</h3>
+                <p className="mt-4 flex items-end gap-2 text-white">
                   <span className="text-5xl font-bold leading-none">{price}</span>
-                  <span className="pb-1 text-base text-slate-500">{period}</span>
+                  <span className="pb-1 text-base text-white/60">{period}</span>
                 </p>
               </div>
-              <span className="inline-flex items-center rounded-full bg-[#25D366]/14 px-3 py-1 text-xs font-semibold tracking-wide text-emerald-700">
+              <span className="inline-flex items-center rounded-full bg-[#25D366]/15 px-3 py-1 text-xs font-semibold tracking-wide text-emerald-100">
                 {badge}
               </span>
             </div>
 
             <ul className="mt-8 space-y-3">
               {features.map((feature) => (
-                <li key={feature} className="flex items-start gap-3 text-slate-700">
+                <li key={feature} className="flex items-start gap-3 text-white/75">
                   <span className="mt-0.5 shrink-0">
                     <CheckIcon />
                   </span>
@@ -159,7 +159,7 @@ export function Pricing({ t, downloadUrl }: PricingProps) {
               {cta}
             </a>
 
-            <p className="mt-4 text-center text-sm text-slate-500">{note}</p>
+            <p className="mt-4 text-center text-sm text-white/60">{note}</p>
           </article>
         </div>
       </div>

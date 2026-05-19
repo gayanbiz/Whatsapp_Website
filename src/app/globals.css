@@ -3,6 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --page-background: radial-gradient(
+      1200px 500px at 50% -10%,
+      rgba(37, 211, 102, 0.28),
+      transparent 70%
+    ),
+    linear-gradient(160deg, #07130f 0%, #0a1a16 40%, #101316 100%);
 }
 
 @theme inline {
@@ -19,7 +25,11 @@
 }
 
 body {
-  background: var(--background);
+  background-color: #0a0f0d;
+  background-image: var(--page-background);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   color: var(--foreground);
   font-family: var(--font-sinhala), var(--font-english), sans-serif;
 }

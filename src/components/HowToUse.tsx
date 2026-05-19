@@ -93,9 +93,9 @@ export function HowToUse({ t }: HowToUseProps) {
   );
   const steps = getSteps(t);
   const imageClassName =
-    "mx-auto w-full max-w-[560px] h-auto max-h-[280px] sm:max-h-[320px] lg:max-h-[380px] rounded-xl border-2 border-slate-200 object-contain bg-white";
+    "mx-auto w-full max-w-[560px] h-auto max-h-[280px] sm:max-h-[320px] lg:max-h-[380px] rounded-xl border-2 border-white/10 object-contain bg-[#0b0f13]/80 shadow-[0_12px_30px_rgba(0,0,0,0.35)]";
   const placeholderClassName =
-    "mx-auto flex w-full max-w-[560px] items-center justify-center rounded-xl border-2 border-dashed border-slate-300 bg-white px-4 py-10 text-sm font-medium tracking-wide text-slate-500";
+    "mx-auto flex w-full max-w-[560px] items-center justify-center rounded-xl border-2 border-dashed border-white/15 bg-white/5 px-4 py-10 text-sm font-medium tracking-wide text-white/60";
   const smartScreenTitle = getText(
     t,
     "howToUse.smartScreenTitle",
@@ -130,21 +130,21 @@ export function HowToUse({ t }: HowToUseProps) {
   ];
 
   return (
-    <section id="howToUse" className="scroll-mt-28 bg-white px-4 py-16 sm:px-6 lg:px-8">
+    <section id="howToUse" className="scroll-mt-28 px-4 py-16 text-white sm:px-6 lg:px-8">
       <div className="mx-auto w-full max-w-6xl">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             {title}
           </h2>
-          <p className="mt-3 text-base text-slate-600 sm:text-lg">{subtitle}</p>
+          <p className="mt-3 text-base text-white/70 sm:text-lg">{subtitle}</p>
         </div>
 
-        <div className="mt-14 rounded-2xl border border-emerald-100 bg-emerald-50/40 px-5 py-8 shadow-sm sm:px-8">
+        <div className="mt-14 rounded-2xl border border-white/10 bg-white/5 px-5 py-8 shadow-[0_20px_60px_rgba(0,0,0,0.3)] sm:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h3 className="text-2xl font-semibold text-slate-900">
+            <h3 className="text-2xl font-semibold text-white">
               {smartScreenTitle}
             </h3>
-            <p className="mt-2 text-sm text-slate-600 sm:text-base">
+            <p className="mt-2 text-sm text-white/70 sm:text-base">
               {smartScreenIntro}
             </p>
           </div>
@@ -153,17 +153,17 @@ export function HowToUse({ t }: HowToUseProps) {
             {smartScreenSteps.map((step, index) => (
               <article
                 key={step.title}
-                className="flex h-full flex-col gap-4 rounded-2xl border border-emerald-100 bg-white/90 p-5 shadow-sm"
+                className="flex h-full flex-col gap-4 rounded-2xl border border-white/10 bg-[#0e1116]/85 p-5 shadow-[0_12px_30px_rgba(0,0,0,0.35)]"
               >
                 <div className="flex items-center gap-3">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-emerald-200 bg-emerald-50 text-sm font-semibold text-emerald-700">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-emerald-300/30 bg-emerald-400/15 text-sm font-semibold text-emerald-100">
                     {index + 1}
                   </span>
-                  <h4 className="text-lg font-semibold text-slate-900">
+                  <h4 className="text-lg font-semibold text-white">
                     {step.title}
                   </h4>
                 </div>
-                <p className="text-sm leading-relaxed text-slate-600 sm:text-base">
+                <p className="text-sm leading-relaxed text-white/70 sm:text-base">
                   {step.description}
                 </p>
                 <img
@@ -177,7 +177,7 @@ export function HowToUse({ t }: HowToUseProps) {
         </div>
 
         <div className="relative mt-12 space-y-12 md:space-y-14">
-          <div className="pointer-events-none absolute left-5 top-0 hidden h-full w-px bg-emerald-200 md:block" />
+          <div className="pointer-events-none absolute left-5 top-0 hidden h-full w-px bg-emerald-300/30 md:block" />
 
           {steps.map((step, index) => {
             const stepNumber = index + 1;
@@ -186,20 +186,20 @@ export function HowToUse({ t }: HowToUseProps) {
             return (
               <article key={stepNumber} className="relative">
                 <div className="mb-4 flex items-center gap-3 md:absolute md:left-0 md:top-6 md:mb-0 md:z-10">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-emerald-300 bg-emerald-50 text-sm font-bold text-emerald-700">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-emerald-300/40 bg-emerald-400/10 text-sm font-bold text-emerald-100">
                     {stepNumber}
                   </span>
                 </div>
 
                 <div
                   className={
-                    "grid gap-6 rounded-2xl border border-slate-200 bg-slate-50/70 p-5 shadow-sm md:ml-14 md:grid-cols-2 md:items-center md:p-7 " +
+                    "grid gap-6 rounded-2xl border border-white/10 bg-white/5 p-5 shadow-[0_18px_50px_rgba(0,0,0,0.25)] md:ml-14 md:grid-cols-2 md:items-center md:p-7 " +
                     (isRightAligned ? "" : "")
                   }
                 >
                   <div className={isRightAligned ? "md:order-2" : "md:order-1"}>
-                    <h3 className="text-xl font-semibold text-slate-900">{step.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
+                    <h3 className="text-xl font-semibold text-white">{step.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-white/70 sm:text-base">
                       {step.description}
                     </p>
                   </div>

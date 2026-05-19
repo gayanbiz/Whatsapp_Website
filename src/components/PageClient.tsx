@@ -16,7 +16,7 @@ export function PageClient({ version, downloadUrl }: PageClientProps) {
   const { t } = useLanguage();
 
   return (
-    <div className="flex min-h-screen flex-col bg-white text-slate-900">
+    <div className="flex min-h-screen flex-col text-slate-900">
       <main className="flex-1">
         <Hero t={t} version={version} />
         <HowToUse t={t} />
